@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="450px"
+    android:layout_height="wrap_content">
+    
+    <ImageButton
+        android:id="@+id/use_status_button"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:text="Ok" 
+        android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+    </ImageButton>
+
+    
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0px"
+        android:layout_toRightOf="@+id/UseStatusButton"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/clock_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7:30"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/days_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="星期一 星期二"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+        
+    </LinearLayout>
+    
+    <ImageButton
+        android:id="@+id/delete_button"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:text="Cancel" android:longClickable="true" 
+        android:layout_alignParentRight="true" android:layout_centerVertical="true">
+    </ImageButton>
+    
+
+</RelativeLayout>
