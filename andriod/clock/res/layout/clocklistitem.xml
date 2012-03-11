@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="0px"
-        android:layout_toRightOf="@+id/UseStatusButton"
+        android:layout_toRightOf="@id/use_status_button"
         android:orientation="vertical" >
 
         <TextView

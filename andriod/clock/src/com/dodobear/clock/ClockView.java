@@ -45,7 +45,7 @@ public class ClockView extends RelativeLayout {
 	 */
 	public void updateView(ClockBean ai) {
 		clockText.setText("7:30 work go go");
-		daysText.setText("1 2 3 5");
+		daysText.setText(ai.GetDaysStr());
 	}
 
 }

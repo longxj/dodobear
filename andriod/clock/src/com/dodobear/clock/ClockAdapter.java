@@ -3,6 +3,8 @@ package com.dodobear.clock;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 public class ClockAdapter extends BaseAdapter {
@@ -39,11 +41,11 @@ public class ClockAdapter extends BaseAdapter {
 			return null;
 		}
 		if (convertView == null) {
-			AppView appView = new AppView(mContext);
+			ClockView appView = new ClockView(mContext);
 			appView.updateView(appInfos.get(position));
 			convertView = appView;
 		} else {
-			((AppView) convertView).updateView(appInfos.get(position));
+			((ClockView) convertView).updateView(appInfos.get(position));
 		}
 		return convertView;
 

@@ -14,12 +14,11 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int UseStatusButton=0x7f050002;
-        public static final int clock_text=0x7f050003;
-        public static final int days_text=0x7f050004;
-        public static final int delete_button=0x7f050005;
+        public static final int clock_text=0x7f050002;
+        public static final int days_text=0x7f050003;
+        public static final int delete_button=0x7f050004;
         public static final int linearLayout1=0x7f050001;
-        public static final int listView=0x7f050006;
+        public static final int listView=0x7f050005;
         public static final int use_status_button=0x7f050000;
     }
     public static final class layout {
