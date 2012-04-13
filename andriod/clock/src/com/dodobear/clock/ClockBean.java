@@ -18,6 +18,17 @@ public class ClockBean {
 	public char days;
 	public int shakeTimes;
 	
+	public String GetTimeStr(){
+		int hour = calendar.get(Calendar.HOUR_OF_DAY);
+		int minute = calendar.get(Calendar.MINUTE);
+		
+		return Integer.toString(hour)+":"+Integer.toString(minute);
+	}
+	
+	public String GetTextStr(){
+		return GetTimeStr() + " " + title;
+	}
+	
 	public String GetDaysStr(){
 		String daysStr = "";
 		

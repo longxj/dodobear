@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="hello">Hello World, ClockActivity!</string>
-    <string name="app_name">Clock</string>
+  
+    <string name="app_name">小熊闹钟</string>
+    <string name="addclock">添加闹钟</string>
+    <string name="clockeditorapp_name">编辑闹钟</string>
 
 </resources>

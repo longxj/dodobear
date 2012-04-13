@@ -4,10 +4,18 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
+    <Button
+        android:id="@+id/bn_addclock"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:text="@string/addclock">
+    </Button>
+    
     <ListView
         android:id="@+id/listView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
     </ListView>
+    
+    
 
 </LinearLayout>

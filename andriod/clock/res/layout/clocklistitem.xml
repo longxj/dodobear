@@ -43,6 +43,5 @@
         android:text="Cancel" android:longClickable="true" 
         android:layout_alignParentRight="true" android:layout_centerVertical="true">
     </ImageButton>
-    
 
 </RelativeLayout>

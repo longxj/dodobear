@@ -14,19 +14,22 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
+        public static final int bn_addclock=0x7f050005;
         public static final int clock_text=0x7f050002;
         public static final int days_text=0x7f050003;
         public static final int delete_button=0x7f050004;
         public static final int linearLayout1=0x7f050001;
-        public static final int listView=0x7f050005;
+        public static final int listView=0x7f050006;
         public static final int use_status_button=0x7f050000;
     }
     public static final class layout {
-        public static final int clocklistitem=0x7f030000;
-        public static final int main=0x7f030001;
+        public static final int clockeditor=0x7f030000;
+        public static final int clocklistitem=0x7f030001;
+        public static final int main=0x7f030002;
     }
     public static final class string {
-        public static final int app_name=0x7f040001;
-        public static final int hello=0x7f040000;
+        public static final int addclock=0x7f040001;
+        public static final int app_name=0x7f040000;
+        public static final int clockeditorapp_name=0x7f040002;
     }
 }

@@ -1,6 +1,7 @@
 package com.dodobear.clock;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import android.app.Activity;
 import android.content.Context;
@@ -37,6 +38,8 @@ public class ClockActivity extends Activity {
 	private void loadData(){
 		ClockBean test = new ClockBean();
 		test.days = 127;
+		test.calendar = Calendar.getInstance();
+		test.title = "test clock";
 		clockList.add(test);
 		test = new ClockBean();
 		clockList.add(test);
