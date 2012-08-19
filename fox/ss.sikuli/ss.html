@@ -72,17 +72,18 @@
 <pre class="sikuli-code">
 <span class="cmt">###global###
 </span>ascene_idtoname = [<span class="str">'炽光城'</span>, <span class="str">'精灵之森'</span>, <span class="str">'晶核峡谷'</span>];
-ascene_map = [<img src="1345299825199.png" />, <img src="1345299852172.png" />, <img src="fiEEF7.png" />];
+ascene_map = [<img src="fFI1IF1.png" />, <img src="egg.png" />, <img src="mziFTE.png" />];
 screen_width = <span class="dig">1070</span>;
 screen_height = <span class="dig">695</span>;
 
 try_times = <span class="dig">6</span>;
 
-<span class="cmt">###func###
+<span class="cmt">###global func###
 </span><span class="kw">def</span> ShowMap():
     i = <span class="dig">0</span>;
     <span class="kw">while</span> <span class="kw">not</span> exists(<img src="1345304847470.png" />) <span class="kw">and</span> i &lt; try_times:
         <span class="skw">type</span>(<span class="str">"m"</span>);
+        <span class="skw">sleep</span>(<span class="dig">1</span>);
         i = i + <span class="dig">1</span>;
 
 
@@ -90,6 +91,7 @@ try_times = <span class="dig">6</span>;
     i = <span class="dig">0</span>;
     <span class="kw">while</span> exists(<img src="1345304847470.png" />) <span class="kw">and</span> i &lt; try_times:
         <span class="skw">type</span>(<span class="str">"m"</span>);
+        <span class="skw">sleep</span>(<span class="dig">1</span>);
         i = i + <span class="dig">1</span>;
 
 
@@ -114,30 +116,80 @@ try_times = <span class="dig">6</span>;
 
 
 <span class="kw">def</span> GetSceneID():
-    <span class="cmt">#if map not on, show map
-</span>    ShowMap();
-
     i = <span class="dig">0</span>;
     <span class="kw">for</span> map <span class="kw">in</span> ascene_map:
-        <span class="kw">if</span> exists(map):
-            HideMap();
+        <span class="kw">if</span> Region(Region(<span class="dig">917</span>,<span class="dig">110</span>,<span class="dig">110</span>,<span class="dig">44</span>)).exists(map):
             <span class="kw">return</span> i;
         i = i + <span class="dig">1</span>;
-
-    HideMap();
     <span class="kw">return</span> -<span class="dig">1</span>;
 
+<span class="cmt">###doudou###
+</span><span class="kw">def</span> GotoNPC():
+    ShowMap();
+    ps = exists(<img src="I.png" />);
+    <span class="kw">if</span> <span class="kw">not</span> ps:
+        <span class="kw">return</span> -<span class="dig">8</span>
+    ps = ps.inside().exists(Pattern(<img src="Bidz.png" />).targetOffset(-<span class="dig">20</span>, -<span class="dig">20</span>));
+    <span class="kw">if</span> <span class="kw">not</span> ps:
+        <span class="kw">return</span> -<span class="dig">11</span>
+    <span class="skw">doubleClick</span>(ps);
+    HideMap();
+
+<span class="kw">def</span> EnterDouDou():
+    ps = exists(<img src="Y.png" />);
+    <span class="kw">if</span> <span class="kw">not</span> ps:
+        <span class="kw">return</span> -<span class="dig">1</span>;
+
+    <span class="skw">click</span>(ps);
+    <span class="skw">sleep</span>(<span class="dig">1</span>);
+    <span class="skw">click</span>(<img src="ifkikhlli.png" />);
+    <span class="skw">sleep</span>(<span class="dig">1</span>);
+    <span class="skw">click</span>(<img src="1345350626806.png" />);
+
+
+<span class="kw">def</span> findAndAttack(pic):
+    dg = exists(pic)
+    <span class="kw">if</span> dg:
+        <span class="skw">doubleClick</span>(dg)
+        <span class="skw">sleep</span>(<span class="dig">12</span>)
+        <span class="kw">return</span> <span class="dig">1</span>
+    <span class="kw">else</span>:
+        <span class="kw">return</span> <span class="dig">0</span>
+
+<span class="kw">def</span> attack(picList):
+    iRet = <span class="dig">0</span>
+    <span class="kw">for</span> pic <span class="kw">in</span> picList:
+        iRet = iRet + findAndAttack(pic)
+
+    <span class="kw">return</span> iRet
+
+
+<span class="kw">def</span> attackRed():
+    picList = [<span class="str">"r1.PNG"</span>,<span class="str">"r2.PNG"</span>,<span class="str">"r3.PNG"</span>,<span class="str">"r4.PNG"</span>,<span class="str">"r5.PNG"</span>,<span class="str">"r6.PNG"</span>,<span class="str">"1.PNG"</span>,<span class="str">"2.PNG"</span>,<span class="str">"4.PNG"</span>,<span class="str">"5.PNG"</span>,<span class="str">"6.PNG"</span>,<span class="str">"7.PNG"</span>,<span class="str">"b1.PNG"</span>,<span class="str">"b2.PNG"</span>,<span class="str">"b3.PNG"</span>]
+    <span class="kw">return</span> attack(picList)
+
+
+<span class="kw">def</span> StartDaDouDou():
+    ps = exists(Pattern(<img src="1345353430259.png" />).targetOffset(<span class="dig">0</span>, -<span class="dig">80</span>));
+    <span class="kw">if</span> ps:
+        <span class="skw">doubleClick</span>(ps);
+
+    attackRed();
+
+
+
+<span class="kw">def</span> DaDouDou():
+    currentScene = GetSceneID();
+    <span class="kw">if</span> (currentScene != <span class="dig">1</span>):
+        Transport(<span class="dig">1</span>);
+    GotoNPC();
+    EnterDouDou();
 
 
 <span class="cmt">###main###
 </span>safari = App(<span class="str">'Safari'</span>);
 safari.focus();
-sceneId = GetSceneID();
-Transport(<span class="dig">1</span>);
 <span class="skw">sleep</span>(<span class="dig">2</span>);
-Transport(<span class="dig">0</span>);
-<span class="skw">sleep</span>(<span class="dig">2</span>);
-Transport(<span class="dig">2</span>);
 </pre>
 </body>
 </html>
