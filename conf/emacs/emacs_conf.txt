@@ -1,0 +1,235 @@
+(setq make-backup-files nil)
+(setq shell-file-name "bash")
+(setenv "SHELL" shell-file-name)
+(setq explicit-shell-file-name shell-file-name)
+
+(setq normal-erase-is-backspace-mode 1)
+
+(add-to-list 'load-path "~/.emacs.d")
+
+(setq bookmark-save-flag 1) 
+(setq bookmark-default-file  (substitute-in-file-name "$BMKNAME"))
+
+(require 'xcscope)
+
+(global-set-key "\C-ci" 'cscope-find-files-including-file)
+(global-set-key "\C-cf" 'cscope-find-this-file)
+(global-set-key "\C-ce" 'cscope-find-egrep-pattern) 
+(global-set-key "\C-ct" 'cscope-find-this-text-string)
+(global-set-key "\C-cs" 'cscope-find-this-symbol)
+(global-set-key "\C-cg" 'cscope-find-global-definition)
+(global-set-key "\C-cu" 'cscope-pop-mark)
+
+(global-font-lock-mode t)
+
+(set-cursor-color "slate blue")
+(set-mouse-color "slate blue")
+
+(set-foreground-color "lightblue")
+(set-background-color "black")
+(set-face-foreground 'region "black")
+(set-face-background 'region "white")
+
+(setq time-stamp-active t)
+(setq time-stamp-warn-inactive t)
+(setq time-stamp-format "%:u %02m/%02d/%04y %02h%02m%02s")
+
+(display-time-mode 1)
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
+(setq display-time-interval 10)
+
+(global-set-key [(meta ?/)] 'hippie-expand)
+(setq hippie-expand-try-functions-list
+'(try-expand-line
+ try-expand-line-all-buffers
+ try-expand-list
+ try-expand-list-all-buffers
+ try-expand-dabbrev
+ try-expand-dabbrev-visible
+ try-expand-dabbrev-all-buffers
+ try-expand-dabbrev-from-kill
+ try-complete-file-name
+ try-complete-file-name-partially
+ try-complete-lisp-symbol
+ try-complete-lisp-symbol-partially
+ try-expand-whole-kill))
+
+
+(minibuffer-electric-default-mode 1)
+
+(partial-completion-mode 1)
+
+(icomplete-mode 1)
+
+;;Display the pictures in Emacs
+(auto-image-file-mode)
+
+;;Directly open tgz file
+(auto-compression-mode 1)
+
+(mouse-avoidance-mode 'animate)
+
+(blink-cursor-mode 1)
+
+(setq resize-mini-windows t)
+
+;;Display the column number in mini-bar
+(column-number-mode t)
+
+(transient-mark-mode 1)
+
+(setq inhibit-startup-message t)
+
+(setq kill-ring-max 200)
+
+(put 'narrow-to-region 'disabled nil)
+
+(split-window-vertically)
+
+(setq frame-title-format "%b@emacs")
+
+(global-set-key "\C-xc" 'set-mark-command)
+(global-set-key "\C-x\C-t" 'toggle-read-only)
+(global-set-key "\C-c\C-s" 'shell)
+(global-set-key "\C-cm" 'buffer-menu)
+(global-set-key "\C-xg" 'goto-line)
+(global-set-key "\C-xj" 'jump-to-register)
+(global-set-key [f1] 'other-window)
+(global-set-key [(f3)] 'goto-line)
+(global-set-key "\C-cn" 'scroll-other-window)
+(global-set-key "\C-cp" 'scroll-other-window-down)
+(global-set-key [f7] 'compile)
+(global-set-key [f5] 'gdb)
+(global-set-key [f2] 'eassist-switch-h-cpp)
+
+
+(add-hook 'write-file-hooks 'time-stamp)
+(add-hook 'before-save-hook(lambda()(delete-trailing-whitespace)))
+(desktop-load-default)
+(desktop-read)
+
+;; Here's a sample .emacs file that might help you along the way.  Just
+;; copy this region and paste it into your .emacs file.  You may want to
+;; change some of the actual values.
+(defconst my-c-style
+  '((c-tab-always-indent        . t)
+    ;;(c-comment-only-line-offset . 4)
+    (c-hanging-braces-alist     . ((substatement-open after)
+                   (brace-list-open)))
+    (c-hanging-colons-alist     . ((member-init-intro before)
+                   (inher-intro)
+                   (case-label after)
+                   (label after)
+                   (access-label after)))
+    (c-cleanup-list             . (scope-operator
+                   empty-defun-braces
+                   defun-close-semi))
+    (c-offsets-alist            . ((arglist-close . c-lineup-arglist)
+                   (substatement-open . 0)
+                   (label . nil)
+                   (arglist-cont-nonempty  . 4)
+                   (case-label        . 4)
+                   (block-open        . 0)
+                   (knr-argdecl-intro . -)))
+    (c-echo-syntactic-information-p . t)
+    )
+  "My C Programming Style")
+
+;; offset customizations not in my-c-style
+(setq c-offsets-alist '((member-init-intro . ++)))
+
+;; Customizations for all modes in CC Mode.
+(defun my-c-mode-common-hook ()
+  ;; add my personal style and set it for the current buffer
+  (c-add-style "PERSONAL" my-c-style t)
+  ;; other customizations
+  (setq tab-width 4)
+    ;; this will make sure spaces are used instead of tabs
+;;  (setq indent-tabs-mode nil)
+  ;; we like auto-newline and hungry-delete
+  ;;(c-toggle-auto-hungry-state nil)
+  ;; key bindings for all supported languages.  We can put these in
+  ;; c-mode-base-map because c-mode-map, c++-mode-map, objc-mode-map,
+  ;; java-mode-map, idl-mode-map, and pike-mode-map inherit from it.
+  (define-key c-mode-base-map "\C-m" 'c-context-line-break)
+  )
+
+(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+
+(setq default-buffer-file-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8) 
+
+(set-language-environment "UTF-8")
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-clipboard-coding-system 'utf-8)
+(set-buffer-file-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(modify-coding-system-alist 'process "*" 'utf-8)
+
+(setq default-buffer-file-coding-system 'utf-8-unix)
+(setq default-file-name-coding-system 'utf-8-unix)
+(setq default-keyboard-coding-system 'utf-8-unix)
+(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
+(setq default-sendmail-coding-system 'utf-8-unix)
+(setq default-terminal-coding-system 'utf-8-unix)
+
+;;auto-complete
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(ac-config-default)
+
+;;set tab 4 blank
+;;(setq tab-width 4 indent-tabs-mode nil)
+
+;;bind the query-replace
+(global-set-key "\C-q" 'query-replace-regexp)
+
+;;cedet
+(load-file "~/.emacs.d/cedet-1.0pre7/common/cedet.el")
+(global-ede-mode 1)                      ; Enable the Project management system
+(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 
+(global-srecode-minor-mode 1)            ; Enable template insertion menu
+
+;;; semantic setup
+(semantic-load-enable-excessive-code-helpers)
+
+(defun my-c-mode-cedet-hook ()
+  (local-set-key "." 'semantic-complete-self-insert)
+  (local-set-key ">" 'semantic-complete-self-insert))
+(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
+
+;;ecb
+(add-to-list 'load-path "~/.emacs.d/ecb-2.40")
+(require 'ecb)
+
+;;(global-set-key "\C-cd" 'ecb-goto-window-directories)
+(global-set-key "\C-cd" 'ecb-goto-window-sources)
+(global-set-key "\C-cm" 'ecb-goto-window-methods)
+(global-set-key "\C-cc" 'ecb-goto-window-edit1)
+
+(ecb-layout-define "mylayout" left
+  (ecb-set-sources-buffer)
+  (ecb-split-ver 0.5)
+  (ecb-set-methods-buffer)
+  (select-window (next-window)))
+
+(setq ecb-compile-window-height 10)
+(setq ecb-layout-name "mylayout")
+
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(ecb-options-version "2.40"))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
+

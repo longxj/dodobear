@@ -1,0 +1,276 @@
+((("GetSize" .
+   [0 0 0 0 0 2 0])
+  ("stValue" .
+   [0 0 0 1 0 0 0])
+  ("m_iSize" .
+   [0 0 0 4 1 0 0])
+  ("GetCapacity" .
+   [0 0 0 0 2 0 0 0 0 0 0])
+  ("m_astData" .
+   [0 0 0 0 1 1 0 0 0])
+  ("assert" .
+   [2 0 0 0 0 0])
+  ("operator" .
+   [1 0 0 0 1 0 0 0])
+  ("MAXARRAYSIZE" .
+   [2 0 0 2 0 0 0 0 0 0 0 0])
+  ("template" .
+   [1 0 1 0 0 0 0 0])
+  ("__MYARRAY_HPP" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("SetMemAddr" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("SetShmId" .
+   [0 0 0 0 0 1 0 0])
+  ("SetSize" .
+   [0 0 1 0 0 0 0])
+  ("pShareMemory" .
+   [0 0 0 3 0 0 0 0 0 0 0 0])
+  ("NULL" .
+   [5 0 0 0])
+  ("bExist" .
+   [0 0 1 1 0 0])
+  ("pAddr" .
+   [4 0 0 1 2])
+  ("0666" .
+   [1 0 0 0])
+  ("shmget" .
+   [1 0 0 0 0 0])
+  ("m_iShmId" .
+   [0 0 0 2 0 5 0 0])
+  ("key_t" .
+   [0 0 0 3 0])
+  ("iTotalSize" .
+   [0 0 0 2 0 0 0 0 0 0])
+  ("size_t" .
+   [1 0 0 0 0 0])
+  ("iShmId" .
+   [1 0 0 4 1 0])
+  ("iSize" .
+   [2 0 3 2 0])
+  ("iKey" .
+   [3 0 0 0])
+  ("pRt" .
+   [1 0 0])
+  ("GetFreeSize" .
+   [0 0 0 1 0 0 0 0 0 0 0])
+  ("uiSize" .
+   [0 0 0 1 3 0])
+  ("uiUsedSize" .
+   [0 0 0 3 0 0 0 0 0 0])
+  ("m_uiSize" .
+   [0 0 0 0 3 2 1 0])
+  ("CShareMemory" .
+   [0 0 0 4 3 0 0 0 0 0 0 0])
+  ("m_pCur" .
+   [0 0 0 5 0 0])
+  ("unsigned" .
+   [0 0 2 0 2 0 0 5])
+  ("private" .
+   [2 0 0 0 0 0 0])
+  ("__SHAREMEMORY_HPP" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("iCount" .
+   [1 0 0 0 0 0])
+  ("IOHandler" .
+   [0 0 0 0 1 0 0 0 0])
+  ("errno" .
+   [7 0 0 0 0])
+  ("SetNonNagle" .
+   [0 0 0 1 0 0 0 0 0 0 0])
+  ("iSockID" .
+   [1 0 1 0 0 0 0])
+  ("alias" .
+   [1 0 0 0 0])
+  ("string" .
+   [2 0 0 0 0 0])
+  ("stdlib" .
+   [1 0 0 0 0 0])
+  ("sql" .
+   [1 0 0])
+  ("sockaddr" .
+   [1 0 0 0 0 0 0 0])
+  ("in" .
+   [1 0])
+  ("socket" .
+   [1 0 0 0 0 0])
+  ("sys" .
+   [2 0 0])
+  ("include" .
+   [27 0 0 1 1 0 0])
+  ("memset" .
+   [2 0 1 0 0 0])
+  ("m_astEvent" .
+   [0 0 0 0 0 2 0 0 0 0])
+  ("sizeof" .
+   [6 0 0 1 0 0])
+  ("astEvent" .
+   [0 0 1 4 0 0 0 0])
+  ("iTimeout" .
+   [0 0 1 1 1 0 0 0])
+  ("CEpollSocket" .
+   [0 0 4 0 0 0 0 0 0 0 0 0])
+  ("MAX_CLIENT_CONNECTION" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("if" .
+   [27 0])
+  ("iFds" .
+   [1 0 1 1])
+  ("return" .
+   [35 0 0 0 0 0])
+  ("for" .
+   [1 0 0])
+  ("int" .
+   [43 0 0])
+  ("stClientAddr" .
+   [0 0 0 0 1 1 1 0 0 0 0 0])
+  ("data" .
+   [3 0 0 0])
+  ("m_iListenSocketID" .
+   [0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("accept" .
+   [1 0 0 0 0 0])
+  ("iClientAddrLen" .
+   [0 0 1 0 0 0 0 1 0 0 0 0 0 0])
+  ("Wait" .
+   [1 0 0 0])
+  ("iConnFd" .
+   [0 0 2 1 1 2 0])
+  ("perror" .
+   [0 0 0 0 1 0])
+  ("i" .
+   [5])
+  ("SetNonblocking" .
+   [0 0 0 2 0 0 0 0 0 0 0 0 0 0])
+  ("struct" .
+   [2 0 0 0 1 0])
+  ("epoll_event" .
+   [0 0 0 0 0 0 0 0 1 0 0])
+  ("stEvent" .
+   [0 0 0 5 0 0 0])
+  ("fd" .
+   [2 0])
+  ("events" .
+   [1 0 2 0 0 1])
+  ("epoll_ctl" .
+   [0 0 0 0 0 0 0 0 1])
+  ("m_iEpollSocketID" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("EPOLL_CTL_ADD" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("else" .
+   [4 0 0 0])
+  ("EPOLLIN" .
+   [0 0 1 0 0 1 0])
+  ("iSocketFd" .
+   [0 0 0 0 0 0 0 1 1])
+  ("continue" .
+   [0 0 0 0 0 3 0 0])
+  ("typedef" .
+   [1 0 0 0 0 0 0])
+  ("const" .
+   [13 0 0 0 0])
+  ("EpollInputFuction" .
+   [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0])
+  ("EpollInputCallBackFunction" .
+   [1 1 0 0 0 2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("EpollSocket" .
+   [0 0 0 1 0 0 0 0 0 0 0])
+  ("RegisterEpollInputCallBackFunction" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("void" .
+   [13 0 0 0])
+  ("switch" .
+   [0 0 0 1 0 0])
+  ("iEventType" .
+   [0 0 0 2 0 0 0 0 0 0])
+  ("case" .
+   [2 0 0 0])
+  ("m_fpEpollInputCallBackFunc" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("pFunction" .
+   [0 0 0 3 0 0 0 0 0])
+  ("break" .
+   [1 0 0 0 0])
+  ("RegisterEpollEventFunction" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("static" .
+   [6 0 0 0 0 0])
+  ("iSock" .
+   [1 0 0 0 0])
+  ("SetNoNagle" .
+   [0 0 1 0 0 0 0 0 0 0])
+  ("bool" .
+   [6 0 0 0])
+  ("m_bNoNagle" .
+   [0 0 0 2 0 0 0 0 0 0])
+  ("bNoNagle" .
+   [0 0 0 2 0 0 0 0])
+  ("false" .
+   [2 0 0 0 0])
+  ("true" .
+   [2 0 0 0])
+  ("LOG_ERROR" .
+   [0 0 0 1 0 1 0 0 0])
+  ("iRet" .
+   [1 0 0 0])
+  ("Log" .
+   [2 0 0])
+  ("hpp" .
+   [6 0 0])
+  ("iRt" .
+   [2 0 0])
+  ("CSingleton" .
+   [0 0 0 1 0 0 0 0 0 0])
+  ("CLog" .
+   [1 0 0 0])
+  ("Init" .
+   [2 0 0 0])
+  ("Instance" .
+   [0 0 0 1 0 0 0 0])
+  ("ifndef" .
+   [1 0 0 0 0 0])
+  ("define" .
+   [1 0 0 0 0 0])
+  ("__COMMPONENTMANAGER_HPP" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("endif" .
+   [1 0 0 0 0])
+  ("class" .
+   [5 0 0 0 0])
+  ("public" .
+   [4 0 0 0 0 0])
+  ("CGatewayServer" .
+   [1 0 0 2 1 0 0 0 0 0 0 0 0 0])
+  ("m_pGatewayServer" .
+   [0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("pGatewayServer" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("CComponentManager" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("SetGatewayServer" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("this" .
+   [4 0 0 0])
+  ("CStringUtility" .
+   [0 0 0 0 0 0 0 2 0 0 0 0 0 0])
+  ("Chomd" .
+   [1 0 0 0 0])
+  ("char" .
+   [9 0 0 0])
+  ("pStr" .
+   [5 0 0 0])
+  ("Chomp" .
+   [2 0 0 0 0])
+  ("iLen" .
+   [2 0 0 0])
+  ("pTimeStr" .
+   [0 0 0 0 2 0 0 0])
+  ("StringUtility" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("LOG_INFO" .
+   [0 0 0 1 0 0 0 0])
+  ("bResume" .
+   [1 0 0 0 0 0 0])
+  ("IniFile" .
+   [1 0 0 0 0 0 0])))
