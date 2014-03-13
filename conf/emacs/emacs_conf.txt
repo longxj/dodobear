@@ -246,3 +246,7 @@
             ;; Set dired-x buffer-local variables here.  For example:
             ;; (dired-omit-mode 1)
             ))
+            
+(require 'color-theme)
+(color-theme-initialize)            
+;;(color-theme-gray30)
