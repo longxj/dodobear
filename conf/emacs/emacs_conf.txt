@@ -10,6 +10,10 @@
 (setq bookmark-save-flag 1) 
 (setq bookmark-default-file  (substitute-in-file-name "$BMKNAME"))
 
+;; display line number
+(require 'linum)
+(global-linum-mode 1)
+
 (require 'xcscope)
 
 (global-set-key "\C-ci" 'cscope-find-files-including-file)
