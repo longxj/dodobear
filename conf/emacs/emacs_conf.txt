@@ -18,10 +18,10 @@
 
 (global-set-key "\C-ci" 'cscope-find-files-including-file)
 (global-set-key "\C-cf" 'cscope-find-this-file)
-(global-set-key "\C-ce" 'cscope-find-egrep-pattern) 
+(global-set-key "\C-cg" 'cscope-find-egrep-pattern) 
 (global-set-key "\C-ct" 'cscope-find-this-text-string)
-(global-set-key "\C-cs" 'cscope-find-this-symbol)
-(global-set-key "\C-cg" 'cscope-find-global-definition)
+(global-set-key "\C-cr" 'cscope-find-this-symbol)
+(global-set-key "\C-cd" 'cscope-find-global-definition)
 (global-set-key "\C-cu" 'cscope-pop-mark)
 
 (global-font-lock-mode t)
@@ -198,8 +198,7 @@
 (semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 
 (global-srecode-minor-mode 1)            ; Enable template insertion menu
 
-;;; semantic setup
-(semantic-load-enable-excessive-code-helpers)
+;;(semantic-load-enable-excessive-code-helpers)
 
 (defun my-c-mode-cedet-hook ()
   (local-set-key "." 'semantic-complete-self-insert)
@@ -209,11 +208,12 @@
 ;;ecb
 (add-to-list 'load-path "~/.emacs.d/ecb-2.40")
 (require 'ecb)
+(require 'ecb-autoloads)
 
 ;;(global-set-key "\C-cd" 'ecb-goto-window-directories)
-(global-set-key "\C-cd" 'ecb-goto-window-sources)
+;;(global-set-key "\C-cd" 'ecb-goto-window-sources)
 (global-set-key "\C-cm" 'ecb-goto-window-methods)
-(global-set-key "\C-cc" 'ecb-goto-window-edit1)
+(global-set-key "\C-ce" 'ecb-goto-window-edit1)
 
 (ecb-layout-define "mylayout" left
   (ecb-set-sources-buffer)
