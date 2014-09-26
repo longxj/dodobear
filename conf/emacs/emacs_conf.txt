@@ -217,7 +217,7 @@
 
 (ecb-layout-define "mylayout" left
   (ecb-set-sources-buffer)
-  (ecb-split-ver 0.5)
+  (ecb-split-ver 0.3)
   (ecb-set-methods-buffer)
   (select-window (next-window)))
 
