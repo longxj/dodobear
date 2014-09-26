@@ -221,6 +221,8 @@
   (ecb-set-methods-buffer)
   (select-window (next-window)))
 
+(setq ecb-tree-indent 1)
+(setq ecb-windows-width 0.2)
 (setq ecb-compile-window-height 10)
 (setq ecb-layout-name "mylayout")
 
